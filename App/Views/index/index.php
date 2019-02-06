@@ -38,26 +38,25 @@
                 <div class="form-group">
                     <label for="codList">Selecionar a Lista</label>
                     <select id="codList" name="codList" class="form-control"required>
-                        <?php 
-                        require_once('connex/connex.php');
+                         <?php 
 
-                        $res = $conn->query("SELECT * FROM listas");
+                        /* $res = $conn->query("SELECT * FROM listas");
                             while($dados= $res->fetch(PDO::FETCH_ASSOC)){
                                 echo "<option value=".$dados['cod'].">".$dados['name_list']."</option>";
-                            }
+                            } */
                         
                                 
-                        ?>
+                        ?> 
                     </select>
                 </div>
                 <div class="form-group">
-                    <lable for="codType">Tipo do Conteúdo</label>
+                    <label for="codType">Tipo do Conteúdo</label>
                     <select name="codType" id="codType" class="form-control">
                         <?php 
-                            $content = $conn->query("SELECT * FROM type_content");
+                           /*  $content = $conn->query("SELECT * FROM type_content");
                                 while($dados=$content->fetch(PDO::FETCH_ASSOC)){
                                     echo "<option value=".$dados['cod'].">".$dados['name']."</option>";
-                                }
+                                } */
                         ?>
                     </select>
                 </div>
@@ -67,15 +66,15 @@
                     
                     <select name="codGroup" id="codGroup" class="form-control">
                         <?php 
-                            $grupo = $conn->query("SELECT * FROM groupo");
+                            /* $grupo = $conn->query("SELECT * FROM groupo");
                                 while($dados=$grupo->fetch(PDO::FETCH_ASSOC)){
                                     echo "<option value=".$dados['cod'].">".$dados['name']."</option>";
-                                }
+                                } */
                         ?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <lable for="content-title">Titulo do conteúdo</label>
+                    <label for="content-title">Titulo do conteúdo</label>
                     <input type="text" class="form-control" name="content-title" id="content-title" placeholder="digite o Nome do Canal ou Filme"required>
                 </div>
                 <div class="form-group">    
