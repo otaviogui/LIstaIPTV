@@ -9,7 +9,7 @@ class Init extends Bootstrap{
   public function initRoutes()
   {
         $arr['home'] = array ('route'=>'/', 'controller'=>'index', 'action'=>'index', 'title'=>'Titulo teste');
-        $arr['Empresa'] = array ('route'=>'/empresa', 'controller'=>'index', 'action'=>'Empresa', 'title'=>'Titulo teste2');
+        $arr['Nova Lista'] = array ('route'=>'/newList', 'controller'=>'index', 'action'=>'newList', 'title'=>'Titulo teste2');
         $arr['login'] = array ('route'=>'/login', 'controller'=>'index', 'action'=>'login', 'title'=>'Titulo teste3');
         $this->setRoutes($arr);
 
