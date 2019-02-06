@@ -11,12 +11,25 @@ class index extends Action
     public function index()
     {
 
-      $content = Container::getClass("Content");
-      $contents = $content->getAll();
+      $list = Container::getClass("Lists");
+      $lists = $list->getAll();
 
-      $this->view->contents = $contents;
-      $this->render('index');
+      $this->view->lists = $lists;
+      $this->render('list');
     }
+
+    public function newList()
+    {
+      $this->render('newList');
+
+      if(isset($_POST['name_list'])){
+        $list = Container::getClass("Lists");
+        $lists = $list->save();
+        
+      }
+    }
+
+    
 
     public function Empresa()
     {
